@@ -1,6 +1,13 @@
-# Ltijs Demo - Client
+<div align="center">
+	<br>
+	<br>
+	<a href="https://cvmcosta.github.io/ltijs"><img width="360" src="https://raw.githubusercontent.com/Cvmcosta/ltijs/987de79b9a3d529b1b507baa7b7a95d32ab386c2/docs/logo-300.svg?sanitize=true"></img></a>
+</div>
 
-> Ltijs Demo App
+
+# Ltijs Demo Client
+
+> Ltijs demo application client
 
 ### Usage
 
