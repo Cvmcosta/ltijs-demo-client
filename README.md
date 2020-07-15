@@ -16,4 +16,4 @@
 
 ### Ltijs server
 
-The code for the Ltijs server used with this project can be found [here]().
+The code for the Ltijs server used with this project can be found [here](https://github.com/Cvmcosta/ltijs-demo-server).
