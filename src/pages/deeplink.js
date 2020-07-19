@@ -3,7 +3,7 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
-import Particles from 'react-particles-js'
+
 import MUIDataTable from 'mui-datatables'
 import Fab from '@material-ui/core/Fab'
 import ky from 'ky'
@@ -125,21 +125,6 @@ export default function App () {
 
   return (
     <Container component='main' maxWidth='lg'>
-      <Particles className='polygon' params={{
-        width: '100%',
-        height: '100%',
-        particles: {
-          number: {
-            value: 40
-          },
-          size: {
-            value: 3
-          },
-          color: {
-            value: '#013b6c'
-          }
-        }
-      }} />
       <CssBaseline />
       <div className={classes.paper}>
         <Grid container>

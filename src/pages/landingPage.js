@@ -4,7 +4,6 @@ import Grid from '@material-ui/core/Grid'
 import Image from 'material-ui-image'
 import { makeStyles } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
-import Particles from 'react-particles-js'
 
 const useStyles = makeStyles(theme => ({
   '@global': {
@@ -72,21 +71,6 @@ export default function App () {
 
   return (
     <Container className={classes.maindiv} component='main' maxWidth='xs'>
-      <Particles className='polygon' params={{
-        width: '100%',
-        height: '100%',
-        particles: {
-          number: {
-            value: 40
-          },
-          size: {
-            value: 3
-          },
-          color: {
-            value: '#013b6c'
-          }
-        }
-      }} />
       <CssBaseline />
       <div className={classes.paper}>
 

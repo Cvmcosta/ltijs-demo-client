@@ -7,7 +7,7 @@ import Grid from '@material-ui/core/Grid'
 import Image from 'material-ui-image'
 import { makeStyles } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
-import Particles from 'react-particles-js'
+
 import Fab from '@material-ui/core/Fab'
 import GradeIcon from '@material-ui/icons/Grade'
 import PersonIcon from '@material-ui/icons/Person'
@@ -114,21 +114,6 @@ export default function App () {
 
   return (
     <Container component='main' maxWidth='sm'>
-      <Particles className='polygon' params={{
-        width: '100%',
-        height: '100%',
-        particles: {
-          number: {
-            value: 40
-          },
-          size: {
-            value: 3
-          },
-          color: {
-            value: '#013b6c'
-          }
-        }
-      }} />
       <CssBaseline />
       <div className={classes.paper}>
 
