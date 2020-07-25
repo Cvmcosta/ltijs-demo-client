@@ -113,7 +113,7 @@ export default function App () {
         grade: grade
       }
 
-      await ky.post('/grade', { json: body, headers: { Authorization: 'Bearer ' + getLtik() } })
+      await ky.post('http://localcvm.com:3000/grade', { json: body, headers: { Authorization: 'Bearer ' + getLtik() } })
       successPrompt(grade)
     } catch (err) {
       console.log(err)

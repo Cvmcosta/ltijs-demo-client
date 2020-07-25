@@ -101,7 +101,7 @@ export default function App () {
   useEffect(() => {
     const getInfo = async () => {
       try {
-        const launchInfo = await ky.get('/info', { headers: { Authorization: 'Bearer ' + getLtik() } }).json()
+        const launchInfo = await ky.get('http://localcvm.com:3000/info', { credentials: 'include', headers: { Authorization: 'Bearer ' + getLtik() } }).json()
         console.log(launchInfo)
         setInfo(launchInfo)
       } catch (err) {

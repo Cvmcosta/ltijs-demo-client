@@ -75,7 +75,7 @@ export default function App () {
   useEffect(() => {
     const fetchMembers = async () => {
       try {
-        const members = await ky.get('/members', { headers: { Authorization: 'Bearer ' + getLtik() } }).json()
+        const members = await ky.get('http://localcvm.com:3000/members', { headers: { Authorization: 'Bearer ' + getLtik() } }).json()
         console.log(members)
         setDataset(members)
       } catch (err) {
