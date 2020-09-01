@@ -121,7 +121,7 @@ export default function App () {
           <Grid item xs className={classes.logo1 + ' blank'}>
             <Image
               className={classes.logo}
-              src='https://raw.githubusercontent.com/Cvmcosta/ltijs/987de79b9a3d529b1b507baa7b7a95d32ab386c2/docs/logo-300.svg?sanitize=true'
+              src='https://raw.githubusercontent.com/Cvmcosta/ltijs/master/docs/logo-300.svg'
               onClick={ltijs}
               disableSpinner
             />
