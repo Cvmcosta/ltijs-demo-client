@@ -69,7 +69,7 @@ export default function App () {
   useEffect(() => {
     const fetchResources = async () => {
       try {
-        const resources = await ky.get('http://localhost:3000/resources', { headers: { Authorization: 'Bearer ' + getLtik() } }).json()
+        const resources = await ky.get('http://localhost:3000/resources', { credentials: 'include', headers: { Authorization: 'Bearer ' + getLtik() } }).json()
         setDataset(resources)
       } catch (err) {
         console.log(err)
@@ -86,7 +86,7 @@ export default function App () {
         errorPrompt('Please select a resource.')
         return
       }
-      const form = await ky.post('http://localhost:3000/deeplink', { json: dataset[resource], headers: { Authorization: 'Bearer ' + getLtik() } }).text()
+      const form = await ky.post('http://localhost:3000/deeplink', { credentials: 'include', json: dataset[resource], headers: { Authorization: 'Bearer ' + getLtik() } }).text()
       $('body').append(form)
     } catch (err) {
       console.log(err)
