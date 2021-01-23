@@ -75,7 +75,7 @@ export default function App () {
   useEffect(() => {
     const fetchMembers = async () => {
       try {
-        const members = await ky.get('http://localhost:3000/members', { credentials: 'include', headers: { Authorization: 'Bearer ' + getLtik() } }).json()
+        const members = await ky.get('/members', { credentials: 'include', headers: { Authorization: 'Bearer ' + getLtik() } }).json()
         console.log(members)
         setDataset(members)
       } catch (err) {
@@ -117,9 +117,9 @@ export default function App () {
       <CssBaseline />
       <div className={classes.paper}>
         <Grid container>
-          <Grid item xs={12} className={classes.table} >
+          <Grid item xs={12} className={classes.table}>
             <MUIDataTable
-              title={'Members:'}
+              title='Members:'
               data={dataset}
               columns={columns}
               options={options}
@@ -130,10 +130,12 @@ export default function App () {
       {/* <Box mt={8}>
         <Copyright />
       </Box> */}
-      <Link to={{
-        pathname: '/',
-        search: document.location.search
-      }}>
+      <Link
+        to={{
+          pathname: '/',
+          search: document.location.search
+        }}
+      >
         <Fab color='primary' aria-label='home' className={classes.home}>
           <HomeIcon />
         </Fab>

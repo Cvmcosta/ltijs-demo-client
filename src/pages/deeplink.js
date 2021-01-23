@@ -69,7 +69,7 @@ export default function App () {
   useEffect(() => {
     const fetchResources = async () => {
       try {
-        const resources = await ky.get('http://localhost:3000/resources', { credentials: 'include', headers: { Authorization: 'Bearer ' + getLtik() } }).json()
+        const resources = await ky.get('/resources', { credentials: 'include', headers: { Authorization: 'Bearer ' + getLtik() } }).json()
         setDataset(resources)
       } catch (err) {
         console.log(err)
@@ -86,7 +86,7 @@ export default function App () {
         errorPrompt('Please select a resource.')
         return
       }
-      const form = await ky.post('http://localhost:3000/deeplink', { credentials: 'include', json: dataset[resource], headers: { Authorization: 'Bearer ' + getLtik() } }).text()
+      const form = await ky.post('/deeplink', { credentials: 'include', json: dataset[resource], headers: { Authorization: 'Bearer ' + getLtik() } }).text()
       $('body').append(form)
     } catch (err) {
       console.log(err)
@@ -130,7 +130,7 @@ export default function App () {
         <Grid container>
           <Grid item xs={12} className={classes.table}>
             <MUIDataTable
-              title={'Example custom resources:'}
+              title='Example custom resources:'
               data={dataset}
               columns={columns}
               options={options}
@@ -138,7 +138,7 @@ export default function App () {
             <Grid item xs className={classes.btnDiv}>
               <Fab variant='extended' color='primary' aria-label='add' className={classes.fab} onClick={submit}>
                 <NavigationIcon className={classes.extendedIcon} />
-                  Submit
+                Submit
               </Fab>
             </Grid>
           </Grid>

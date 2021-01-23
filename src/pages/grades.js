@@ -113,7 +113,7 @@ export default function App () {
         grade: grade
       }
 
-      await ky.post('http://localhost:3000/grade', { credentials: 'include', json: body, headers: { Authorization: 'Bearer ' + getLtik() } })
+      await ky.post('/grade', { credentials: 'include', json: body, headers: { Authorization: 'Bearer ' + getLtik() } })
       successPrompt(grade)
     } catch (err) {
       console.log(err)
@@ -180,10 +180,12 @@ export default function App () {
       {/* <Box mt={8}>
         <Copyright />
       </Box> */}
-      <Link to={{
-        pathname: '/',
-        search: document.location.search
-      }}>
+      <Link
+        to={{
+          pathname: '/',
+          search: document.location.search
+        }}
+      >
         <Fab color='primary' aria-label='home' className={classes.home}>
           <HomeIcon />
         </Fab>
